@@ -1,0 +1,134 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+height: 100vh;
+}
+h1{
+    padding: 20px 0px;
+    margin: 10px;
+}
+.loading-bar{
+    margin:auto;
+    height: 25px;
+    padding: 5px;
+    width:600px;
+    border: solid darkblue ;
+    border-radius: 2em;
+}
+.bar{
+    
+    padding: 1px;
+    height: 10px;
+    width:590px;
+    background-color: lightskyblue;
+    border-radius: 2em;
+    animation-name:bar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes bar{
+    0%{
+        width: 0;
+    }
+    30%{
+        width:10;
+    }
+    100%{
+        width:100;
+    }
+}
+
+ .spinner{
+    position: relative;
+    padding: 30px;
+    margin: auto;
+ }
+@keyframes spinner {
+    0% {
+      transform:  rotate(0deg);
+    }
+    100% {
+      transform:  rotate(360deg);
+    }
+  }
+  .spin::before {
+    animation: 1.5s linear infinite spinner;
+    border: solid 5px grey;
+    border-bottom-color: black;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+    position: absolute;
+    top: 0;
+    left: 48%;
+  }
+.dot-loading{
+    margin: 20px auto;
+    padding: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color: none;
+    background-color: skyblue; 
+    display: flex;
+  }
+  .circle {
+    padding: 5px;
+    height: 5px;
+    width: 5px;
+    background-color:white;
+    border-radius: 50%;
+    margin: auto;
+    animation: dot 1s linear infinite;
+  }
+    
+@keyframes dot {
+  0% , 100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  
+}
+.two {
+  animation-delay: 0.3s;
+}
+.three {
+  animation-delay: 0.6s;
+}
+img{
+    position: fixed;
+    height: 50px;
+    border-radius: 50%;
+    right: 40px;
+    bottom: 40px;
+    animation: echo 1.4s linear infinite;
+}
+
+@keyframes echo{
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+
+      }
+      30%{
+        box-shadow: 0 0 0 10px rgba(30, 189, 67, 0.447);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(30, 189, 67, 0.415);
+        box-shadow: 0 0 0 10px white;
+
+      }
+      100%{
+        box-shadow: 0 0 0 15px white;
+      }
+      
+
+}
